@@ -46,4 +46,5 @@ root (project root folder)
 ## Authors
 ---
 * Ana Tellez (tel24003@byui.edu)
+* Luis Rojas (roj21008@byui.edu)
 ```
