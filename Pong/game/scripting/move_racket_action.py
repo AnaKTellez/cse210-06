@@ -37,4 +37,4 @@ class MoveRacketAction(Action):
         elif x2 > (SCREEN_WIDTH - RACKET_WIDTH):
             position2 = Point(SCREEN_WIDTH - RACKET_WIDTH, position2.get_x())
 
-        body2.set_position(position2)
+        body2.set_position(position2)   
