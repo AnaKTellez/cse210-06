@@ -12,7 +12,7 @@ class Animation:
         self._images = images
         self._rate = rate
         self._index = 0
-        self._frame = 0
+        self._frame = 10
         self._start = time.time()
 
     def get_delay(self):

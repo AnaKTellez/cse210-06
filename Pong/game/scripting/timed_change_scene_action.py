@@ -1,7 +1,6 @@
 import time
 from game.scripting.action import Action
 
-
 class TimedChangeSceneAction(Action):
 
     def __init__(self, next_scene, delay):

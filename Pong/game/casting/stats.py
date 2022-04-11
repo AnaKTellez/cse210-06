@@ -10,7 +10,7 @@ class Stats(Actor):
         super().__init__(debug)
         self._lives = DEFAULT_LIVES
         self._score = 0
-
+      
     def add_life(self):
         """Adds one life."""
         if self._lives < MAXIMUM_LIVES:
@@ -46,4 +46,4 @@ class Stats(Actor):
     def reset(self):
         """Resets the stats back to their default values."""
         self._lives = DEFAULT_LIVES
-        self._score = 0
+        self._score = 0  

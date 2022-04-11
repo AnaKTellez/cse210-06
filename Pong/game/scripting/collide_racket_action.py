@@ -29,4 +29,4 @@ class CollideRacketAction(Action):
         if self._physics_service.has_collided(ball_body, racket_body2):
             ball.bounce_x()
             sound = Sound(BOUNCE_SOUND)
-            self._audio_service.play_sound(sound)
+            self._audio_service.play_sound(sound)    

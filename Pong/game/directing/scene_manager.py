@@ -41,8 +41,7 @@ class SceneManager:
     PHYSICS_SERVICE = RaylibPhysicsService()
     VIDEO_SERVICE = RaylibVideoService(GAME_NAME, SCREEN_WIDTH, SCREEN_HEIGHT)
 
-    COLLIDE_BORDERS_ACTION = CollideBordersAction(
-        PHYSICS_SERVICE, AUDIO_SERVICE)
+    COLLIDE_BORDERS_ACTION = CollideBordersAction(PHYSICS_SERVICE, AUDIO_SERVICE)
     COLLIDE_RACKET_ACTION = CollideRacketAction(PHYSICS_SERVICE, AUDIO_SERVICE)
     CONTROL_RACKET_ACTION = ControlRacketAction(KEYBOARD_SERVICE)
     DRAW_BALL_ACTION = DrawBallAction(VIDEO_SERVICE)
@@ -50,8 +49,7 @@ class SceneManager:
     DRAW_HUD_ACTION = DrawHudAction(VIDEO_SERVICE)
     DRAW_RACKET_ACTION = DrawRacketAction(VIDEO_SERVICE)
     END_DRAWING_ACTION = EndDrawingAction(VIDEO_SERVICE)
-    INITIALIZE_DEVICES_ACTION = InitializeDevicesAction(
-        AUDIO_SERVICE, VIDEO_SERVICE)
+    INITIALIZE_DEVICES_ACTION = InitializeDevicesAction(AUDIO_SERVICE, VIDEO_SERVICE)
     LOAD_ASSETS_ACTION = LoadAssetsAction(AUDIO_SERVICE, VIDEO_SERVICE)
     MOVE_BALL_ACTION = MoveBallAction()
     MOVE_RACKET_ACTION = MoveRacketAction()
@@ -91,11 +89,10 @@ class SceneManager:
         self._add_initialize_script(script)
         self._add_load_script(script)
         script.clear_actions(INPUT)
-        script.add_action(INPUT, ChangeSceneAction(
-            self.KEYBOARD_SERVICE, NEXT_GAME))
+        script.add_action(INPUT, ChangeSceneAction(self.KEYBOARD_SERVICE, NEXT_GAME))
         self._add_output_script(script)
         self._add_unload_script(script)
-        self._add_release_script(script)
+        self._add_release_script(script)        
 
     def _prepare_next_game(self, cast, script):
         self._add_ball(cast)
@@ -105,8 +102,7 @@ class SceneManager:
         script.clear_actions(INPUT)
         script.add_action(INPUT, TimedChangeSceneAction(IN_PLAY, 2))
         self._add_output_script(script)
-        script.add_action(OUTPUT, PlaySoundAction(
-            self.AUDIO_SERVICE, WELCOME_SOUND))
+        script.add_action(OUTPUT, PlaySoundAction(self.AUDIO_SERVICE, WELCOME_SOUND))
 
     def _prepare_try_again(self, cast, script):
         self._add_ball(cast)
