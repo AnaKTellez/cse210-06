@@ -11,12 +11,19 @@ class Actor:
             group: A string containing the actor's group name.
             id: A number that uniquely identifies the actor within the group.
         """
+        self._idx = 0
         self._debug = debug
 
     def is_debug(self):
         """Whether or not the actor is being debugged.
-
+ 
         Returns:
             True if the actor is being debugged; False if otherwise.
         """
         return self._debug
+
+    def set_idx(self, idx):
+        self._idx = idx
+    
+    def get_idx(self):
+        return self._idx

@@ -33,7 +33,7 @@ class Racket(Actor):
             An instance of Body.
         """
         return self._body
-
+ 
     def move_next(self):
         """Moves the bat using its velocity."""
         position = self._body.get_position()
